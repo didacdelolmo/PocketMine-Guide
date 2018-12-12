@@ -28,7 +28,7 @@ class ExamplesPlayer extends Player {
     }
 
     /**
-     * Add baked potatoes to all empty slots of a player
+     * Add baked potatoes to fill all empty slots of a player
      */
     public function fillEmptySlots(): void {
         $inv = $this->getInventory();
