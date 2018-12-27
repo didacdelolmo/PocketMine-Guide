@@ -14,8 +14,11 @@ class DisableRegenListener implements Listener {
      * @param EntityRegainHealthEvent $event
      */
     public function onRegainHealth(EntityRegainHealthEvent $event): void {
-        if($event->getRegainReason() === EntityRegainHealthEvent::CAUSE_EATING) {
-            $event->setCancelled();
+        switch($event->getRegainReason()) {
+            case EntityRegainHealthEvent::CAUSE_REGEN:
+            case EntityRegainHealthEvent::CAUSE_EATING:
+                $event->setCancelled();
+                break;
         }
     }
 
