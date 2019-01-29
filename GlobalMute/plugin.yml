@@ -1,0 +1,6 @@
+main: GlobalMute\GlobalMute
+name: GlobalMute
+author: Didah
+website: twitter.com/Diduhless
+version: "1.0"
+api: [3.0.0]
